@@ -1,0 +1,642 @@
+/* Общие стили для всего сайта */
+body {
+    font-family: 'Arial', sans-serif; /* Выбираем шрифт */
+    margin: 0; /* Убираем отступы по умолчанию у body */
+    padding: 0; /* Убираем внутренние отступы по умолчанию */
+    background-color: #f4f4f4; /* Светло-серый фон */
+    color: #333; /* Темно-серый цвет текста по умолчанию */
+    line-height: 1.6; /* Межстрочный интервал */
+}
+
+.container {
+    width: 80%; /* Ширина контейнера, чтобы контент не растягивался на весь экран */
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: auto; /* Выравнивание контейнера по центру */
+    overflow: hidden; /* Очистка плавающих элементов внутри контейнера */
+}
+
+/* Стили для шапки сайта (header) */
+header {
+    background-color: #2c3e50; /* Темно-синий фон */
+    color: #fff; /* Белый текст */
+    padding: 1rem 0; /* Внутренние отступы сверху и снизу */
+    border-bottom: 3px solid #3498db; /* Синяя полоса снизу */
+}
+
+header h1 {
+    float: left; /* Выравнивание заголовка по левому краю */
+    margin: 0; /* Убираем отступы у заголовка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+header nav {
+    float: right; /* Выравнивание навигации по правому краю */
+}
+
+header ul {
+    margin: 0; /* Убираем отступы у списка */
+    padding: 0; /* Убираем внутренние отступы */
+    list-style: none; /* Убираем маркеры списка */
+}
+
+header li {
+    display: inline; /* Отображаем элементы списка в одну строку */
+    padding: 0 15px; /* Отступы между пунктами меню */
+}
+
+header a {
+    color: #fff; /* Белый цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    text-transform: uppercase; /* Текст заглавными буквами */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+header a:hover {
+    color: #3498db; /* Изменение цвета при наведении */
+}
+
+/* Стили для главной секции (hero) */
+#hero {
+    min-height: 400px; /* Минимальная высота секции */
+    background: #555 url('../images/minecraft_bg.jpg') no-repeat center center/cover; /* Фон: темно-серый, изображение, без повтора, по центру, растянуть */
+    color: #fff; /* Белый текст */
+    display: flex; /* Используем flexbox для центрирования контента */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Внутренний отступ */
+}
+
+#hero h2 {
+    font-size: 3rem; /* Размер заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Тень для текста */
+}
+
+#hero p {
+    font-size: 1.2rem; /* Размер текста */
+    margin-bottom: 20px; /* Отступ снизу */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Тень для текста */
+}
+
+.btn {
+    display: inline-block; /* Отображение как блочный элемент в строке */
+    background: #3498db; /* Синий фон кнопки */
+    color: #fff; /* Белый текст кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Скругленные углы */
+    transition: background 0.3s ease; /* Плавный переход цвета при наведении */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.btn:hover {
+    background: #2980b9; /* Изменение цвета кнопки при наведении */
+}
+
+/* Стили для секции преимуществ (features) */
+#features {
+    padding: 40px 0; /* Внутренние отступы сверху и снизу */
+    background-color: #fff; /* Белый фон */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+#features h3 {
+    font-size: 2.5rem; /* Размер заголовка */
+    margin-bottom: 30px; /* Отступ снизу */
+    color: #2c3e50; /* Цвет заголовка */
+}
+
+.feature-grid {
+    display: grid; /* Используем CSS Grid для создания сетки */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Автоматическое создание колонок, минимум 300px, максимум 1fr */
+    gap: 20px; /* Отступы между элементами сетки */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.feature-item {
+    background-color: #ecf0f1; /* Светло-серый фон элемента */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.feature-item:hover {
+    transform: translateY(-5px); /* Подъем элемента при наведении */
+}
+
+.feature-item h4 {
+    color: #3498db; /* Синий цвет заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 1.5rem; /* Размер заголовка */
+}
+
+.feature-item p {
+    font-size: 1rem; /* Размер текста */
+    color: #555; /* Цвет текста */
+}
+
+
+/* Стили для подвала сайта (footer) */
+footer {
+    background-color: #2c3e50; /* Темно-синий фон */
+    color: #fff; /* Белый текст */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 1.5rem 0; /* Внутренние отступы сверху и снизу */
+    margin-top: 30px; /* Отступ сверху */
+}
+/* --- Стили для страницы Доната (donate.html) --- */
+
+#donate-intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #ddd;
+}
+
+#donate-intro h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#donate-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+#ranks, #other-items, #payment-info {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#ranks h3, #other-items h3, #payment-info h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Сетка для рангов */
+.rank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.rank-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Используем flexbox для внутреннего выравнивания */
+    flex-direction: column; /* Элементы идут сверху вниз */
+    justify-content: space-between; /* Распределение пространства */
+    align-items: center; /* Выравнивание по центру */
+}
+
+.rank-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rank-item h4 {
+    color: #3498db;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.rank-item p {
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Позволяет параграфу занимать все доступное пространство */
+}
+
+.rank-item ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0 0 20px 0; /* Отступы для списка */
+    text-align: left; /* Выравниваем текст списка по левому краю */
+    width: 100%; /* Занимаем всю доступную ширину */
+}
+
+.rank-item ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee; /* Пунктирная линия под элементами списка */
+    color: #444;
+}
+
+.rank-item ul li:last-child {
+    border-bottom: none; /* Убираем линию у последнего элемента */
+}
+
+.rank-item .price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #28a745; /* Зеленый цвет для цены */
+    margin-bottom: 20px;
+}
+
+/* Сетка для дополнительных предметов */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.item-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card h4 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    color: #666;
+    flex-grow: 1;
+}
+
+.item-card .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 15px; /* Отступ сверху для цены */
+    margin-bottom: 20px; /* Отступ снизу для цены */
+}
+
+/* Стили для информации об оплате */
+#payment-info p {
+    max-width: 900px;
+    margin: 0 auto 15px auto;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+#payment-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+#payment-info ul li {
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    color: #333;
+}
+/* --- Стили для страницы Обратной связи (contact.html) --- */
+
+#contact-intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #ddd;
+}
+
+#contact-intro h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#contact-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+#contact-form-section, #other-contact-methods {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact-form-section h3, #other-contact-methods h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left; /* Выравнивание текста внутри формы по левому краю */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; /* Каждая метка на новой строке */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Ширина поля минус отступы */
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Важно для корректной ширины с учетом padding и border */
+}
+
+.form-group textarea {
+    resize: vertical; /* Разрешаем изменение размера по вертикали */
+    min-height: 120px; /* Минимальная высота текстового поля */
+}
+
+.contact-form .btn {
+    width: auto; /* Кнопка не растягивается на всю ширину */
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    cursor: pointer; /* Курсор в виде указателя */
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+.form-note a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.form-note a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для других способов связи */
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.method-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.method-item:hover {
+    transform: translateY(-5px);
+}
+
+.method-item h4 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.method-item p {
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.method-item .btn {
+    width: auto;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+/* --- Стили для страницы Правил (rules.html) --- */
+
+#rules-intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #ddd;
+}
+
+#rules-intro h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#rules-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+#general-rules, #chat-rules, #build-rules, #punishments {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px; /* Отступ между секциями */
+    border-bottom: 1px solid #eee; /* Разделительная линия между секциями */
+}
+
+#general-rules:last-of-type, #chat-rules:last-of-type, #build-rules:last-of-type, #punishments:last-of-type {
+    border-bottom: none; /* Убираем линию у последней секции */
+}
+
+
+#general-rules h3, #chat-rules h3, #build-rules h3, #punishments h3 {
+    font-size: 2.5rem;
+    color: #3498db; /* Синий цвет для заголовков разделов */
+    margin-bottom: 30px;
+    text-align: center; /* Центрируем заголовки */
+}
+
+.rule-list, .punishment-list {
+    max-width: 900px; /* Ограничиваем ширину списка правил */
+    margin: 0 auto; /* Центрируем список */
+    list-style-position: inside; /* Нумерация/маркеры внутри контента */
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding-left: 20px; /* Отступ для нумерации/маркеров */
+}
+
+.rule-list li, .punishment-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Легкая тень для пунктов */
+}
+
+.rule-list li:last-child, .punishment-list li:last-child {
+    margin-bottom: 0;
+}
+
+#punishments p {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+}
+/* --- Стили для страницы Главная (about.html) --- */
+
+#about-intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #ddd;
+}
+
+#about-intro h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#about-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+#our-story, #our-mission, #our-team {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+#our-story:last-of-type, #our-mission:last-of-type, #our-team:last-of-type {
+    border-bottom: none;
+}
+
+#our-story h3, #our-mission h3, #our-team h3 {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.story-content, .mission-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.story-content p:last-child, .mission-content p:last-child {
+    margin-bottom: 0;
+}
+
+.mission-content ul {
+    list-style: disc; /* Маркеры в виде кругов */
+    padding-left: 25px; /* Отступ для маркеров */
+    margin-top: 20px;
+}
+
+.mission-content ul li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.mission-content ul li strong {
+    color: #2c3e50; /* Более темный цвет для выделенного текста */
+}
+
+/* Стили для команды */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: center; /* Центрируем содержимое карточек */
+}
+
+.team-member {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравнивание по центру */
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 120px; /* Размер изображения */
+    height: 120px;
+    border-radius: 50%; /* Круглое изображение */
+    object-fit: cover; /* Обрезка изображения для заполнения круга */
+    margin-bottom: 15px;
+    border: 4px solid #3498db; /* Синяя рамка вокруг изображения */
+}
+
+.team-member h4 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.member-description {
+    font-style: italic; /* Курсив для описания */
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.team-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 30px;
+    text-align: center;
+}
